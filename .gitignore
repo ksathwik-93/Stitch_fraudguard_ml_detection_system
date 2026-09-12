@@ -1,0 +1,8 @@
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+dist/
+.DS_Store
+ml/data/*.csv

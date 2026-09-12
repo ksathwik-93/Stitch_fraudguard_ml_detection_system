@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Project - FraudGuard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400&display=swap');
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#003824",
+                        "on-secondary-fixed": "#002113",
+                        "on-secondary-container": "#00311f",
+                        "surface-container-highest": "#2d3449",
+                        "on-primary": "#002e6a",
+                        "primary-fixed": "#d8e2ff",
+                        "inverse-surface": "#dae2fd",
+                        "tertiary-fixed-dim": "#ffb3ad",
+                        "on-tertiary-container": "#5c0008",
+                        "primary-fixed-dim": "#adc6ff",
+                        "secondary-container": "#00a572",
+                        "surface": "#0b1326",
+                        "on-error-container": "#ffdad6",
+                        "surface-dim": "#0b1326",
+                        "secondary-fixed-dim": "#4edea3",
+                        "surface-bright": "#31394d",
+                        "on-primary-container": "#00285d",
+                        "on-surface-variant": "#c2c6d6",
+                        "surface-container-lowest": "#060e20",
+                        "tertiary-container": "#ff5451",
+                        "on-error": "#690005",
+                        "surface-container": "#171f33",
+                        "primary": "#adc6ff",
+                        "on-primary-fixed-variant": "#004395",
+                        "secondary": "#4edea3",
+                        "error-container": "#93000a",
+                        "error": "#ffb4ab",
+                        "on-secondary-fixed-variant": "#005236",
+                        "primary-container": "#4d8eff",
+                        "inverse-primary": "#005ac2",
+                        "secondary-fixed": "#6ffbbe",
+                        "on-tertiary": "#68000a",
+                        "surface-container-low": "#131b2e",
+                        "surface-tint": "#adc6ff",
+                        "on-tertiary-fixed": "#410004",
+                        "on-surface": "#dae2fd",
+                        "on-background": "#dae2fd",
+                        "outline": "#8c909f",
+                        "outline-variant": "#424754",
+                        "surface-container-high": "#222a3d",
+                        "on-primary-fixed": "#001a42",
+                        "on-tertiary-fixed-variant": "#930013",
+                        "tertiary": "#ffb3ad",
+                        "surface-variant": "#2d3449",
+                        "inverse-on-surface": "#283044",
+                        "tertiary-fixed": "#ffdad7",
+                        "background": "#0b1326"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-sm": "8px",
+                        "gutter": "16px",
+                        "container-padding": "24px",
+                        "stack-md": "16px",
+                        "stack-lg": "32px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Geist"],
+                        "headline-lg": ["Geist"],
+                        "headline-md": ["Geist"],
+                        "mono-data": ["Geist Mono"],
+                        "body-lg": ["Geist"],
+                        "body-md": ["Geist"],
+                        "display": ["Geist"]
+                    },
+                    "fontSize": {
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "mono-data": ["13px", { "lineHeight": "18px", "fontWeight": "400" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "display": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col md:flex-row antialiased">
+<!-- TopNavBar (Mobile Only) -->
+<header class="md:hidden sticky top-0 z-50 flex justify-between items-center w-full px-container-padding h-16 bg-surface border-b border-outline-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl">shield</span>
+<span class="text-headline-md font-headline-md font-bold text-primary">FraudGuard</span>
+</div>
+<div class="flex items-center gap-4 text-on-surface-variant">
+<span class="material-symbols-outlined hover:text-primary transition-colors cursor-pointer" data-icon="search">search</span>
+<span class="material-symbols-outlined hover:text-primary transition-colors cursor-pointer" data-icon="menu">menu</span>
+</div>
+</header>
+<!-- SideNavBar (Desktop Only) -->
+<nav class="hidden md:flex fixed left-0 top-0 h-full w-60 flex-col py-stack-lg px-stack-md z-40 bg-surface-container border-r border-outline-variant">
+<div class="mb-stack-lg flex items-center gap-3 px-3">
+<span class="material-symbols-outlined text-primary text-3xl">shield</span>
+<div>
+<h1 class="text-headline-md font-headline-md font-black text-primary">FraudGuard</h1>
+<p class="text-label-md font-label-md text-on-surface-variant uppercase tracking-widest mt-1">ML Monitoring Suite</p>
+</div>
+</div>
+<ul class="flex-1 space-y-2">
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-label-md font-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors" data-icon="dashboard">dashboard</span>
+                    Dashboard
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-label-md font-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors" data-icon="analytics">analytics</span>
+                    Analyze Transaction
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-label-md font-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors" data-icon="receipt_long">receipt_long</span>
+                    Transactions
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-label-md font-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors" data-icon="insights">insights</span>
+                    Analytics
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-label-md font-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors" data-icon="query_stats">query_stats</span>
+                    Model Performance
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-label-md font-label-md bg-secondary-container text-on-secondary-container rounded-lg font-bold translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="info">info</span>
+                    About Project
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-label-md font-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors" data-icon="settings">settings</span>
+                    Settings
+                </a>
+</li>
+</ul>
+<div class="mt-auto pt-stack-md border-t border-outline-variant flex items-center justify-between px-3">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">wifi</span>
+<span class="text-label-md font-label-md">System Online</span>
+</div>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 md:ml-60 p-container-padding lg:p-stack-lg max-w-6xl mx-auto w-full">
+<!-- Header -->
+<header class="mb-stack-lg">
+<div class="flex items-center gap-2 mb-2 text-primary">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+<span class="text-label-md font-label-md uppercase tracking-wider">Academic Project Overview</span>
+</div>
+<h1 class="text-display font-display text-on-surface mb-4">Online Payment Fraud Detection Using Machine Learning</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-3xl">
+                A comprehensive machine learning system designed to identify and flag anomalous transactions in simulated financial environments. This documentation outlines the architecture, methodologies, and limitations of the FraudGuard project.
+            </p>
+</header>
+<!-- Disclaimer Warning -->
+<div class="bg-error-container/10 border border-error/20 rounded-xl p-6 mb-stack-lg flex items-start gap-4">
+<span class="material-symbols-outlined text-error text-2xl mt-1" data-icon="warning">warning</span>
+<div>
+<h3 class="text-headline-md font-headline-md text-error mb-2">Important Disclaimer</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">
+                    FraudGuard is strictly an <strong>academic prototype</strong> designed for educational and research purposes. It operates on simulated, synthetic datasets and is <strong>not intended or equipped for processing real financial transactions, sensitive personal data, or integration into live production banking environments</strong>. Any data presented within this interface is purely illustrative.
+                </p>
+</div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Objective Card -->
+<div class="md:col-span-12 lg:col-span-8 bg-surface-container-low border border-outline-variant rounded-xl p-6 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl text-primary" data-icon="target">target</span>
+</div>
+<h2 class="text-headline-lg font-headline-lg text-on-surface mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="flag">flag</span>
+                    Project Objective
+                </h2>
+<div class="prose prose-invert max-w-none text-body-lg font-body-lg text-on-surface-variant space-y-4">
+<p>
+                        The primary goal of this project is to develop a robust, high-precision machine learning model capable of distinguishing between legitimate and fraudulent online payment transactions in real-time.
+                    </p>
+<p>
+                        We aim to address the critical challenge of class imbalance inherent in fraud detection datasets (where legitimate transactions vastly outnumber fraudulent ones) while minimizing false positives to reduce user friction during checkout processes.
+                    </p>
+<ul class="list-disc pl-5 space-y-2 mt-4 text-body-md font-body-md">
+<li>Achieve an F1-score &gt; 0.85 on the minority (fraud) class.</li>
+<li>Maintain inference latency under 200ms per transaction.</li>
+<li>Provide interpretable risk scoring for analyst review.</li>
+</ul>
+</div>
+</div>
+<!-- Architecture Diagram Placeholder -->
+<div class="md:col-span-12 lg:col-span-4 bg-surface-container-low border border-outline-variant rounded-xl p-6 flex flex-col items-center justify-center relative overflow-hidden min-h-[300px]">
+<h3 class="text-headline-md font-headline-md text-on-surface mb-4 self-start">Architecture</h3>
+<!-- Conceptual graphic representation -->
+<div class="w-full h-full flex flex-col items-center justify-center gap-4 text-on-surface-variant opacity-70">
+<div class="flex items-center gap-2 bg-surface-container border border-outline-variant px-4 py-2 rounded-lg">
+<span class="material-symbols-outlined" data-icon="database">database</span> Data Ingestion
+                    </div>
+<span class="material-symbols-outlined" data-icon="arrow_downward">arrow_downward</span>
+<div class="flex items-center gap-2 bg-surface-container border border-primary/30 px-4 py-2 rounded-lg text-primary">
+<span class="material-symbols-outlined" data-icon="memory">memory</span> Inference Engine
+                    </div>
+<span class="material-symbols-outlined" data-icon="arrow_downward">arrow_downward</span>
+<div class="flex items-center gap-2 bg-surface-container border border-outline-variant px-4 py-2 rounded-lg">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span> Analyst UI
+                    </div>
+</div>
+</div>
+<!-- ML Approach: Preprocessing -->
+<div class="md:col-span-12 lg:col-span-6 bg-surface-container-low border border-outline-variant rounded-xl p-6">
+<div class="flex items-center justify-between border-b border-outline-variant pb-4 mb-4">
+<h3 class="text-headline-md font-headline-md text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="filter_alt">filter_alt</span>
+                        Data Preprocessing
+                    </h3>
+</div>
+<div class="space-y-4">
+<div class="bg-surface-container rounded-lg p-4 border border-outline-variant/50">
+<h4 class="text-body-lg font-body-lg font-semibold text-on-surface mb-1">Feature Engineering</h4>
+<p class="text-body-md font-body-md text-on-surface-variant">Time-based aggregations (e.g., velocity of transactions per user within 1h, 24h windows), device fingerprinting abstraction, and geographical distance calculations between IP location and shipping address.</p>
+</div>
+<div class="bg-surface-container rounded-lg p-4 border border-outline-variant/50">
+<h4 class="text-body-lg font-body-lg font-semibold text-on-surface mb-1">Handling Imbalance</h4>
+<p class="text-body-md font-body-md text-on-surface-variant">Implementation of Synthetic Minority Over-sampling Technique (SMOTE) combined with Edited Nearest Neighbours (ENN) to create a balanced training set without introducing severe overfitting.</p>
+</div>
+<div class="bg-surface-container rounded-lg p-4 border border-outline-variant/50">
+<h4 class="text-body-lg font-body-lg font-semibold text-on-surface mb-1">Normalization</h4>
+<p class="text-body-md font-body-md text-on-surface-variant">Robust Scaling applied to continuous variables (like transaction amount) to mitigate the influence of extreme outliers common in financial data.</p>
+</div>
+</div>
+</div>
+<!-- ML Approach: Algorithms -->
+<div class="md:col-span-12 lg:col-span-6 bg-surface-container-low border border-outline-variant rounded-xl p-6">
+<div class="flex items-center justify-between border-b border-outline-variant pb-4 mb-4">
+<h3 class="text-headline-md font-headline-md text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container" data-icon="model_training">model_training</span>
+                        Algorithms Evaluated
+                    </h3>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6">
+                    Multiple models were trained and cross-validated. The final deployment utilizes an ensemble approach to balance recall and precision.
+                </p>
+<div class="space-y-3">
+<!-- Model 1 -->
+<div class="flex items-center justify-between p-3 bg-surface-container rounded-lg border border-outline-variant/50 hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-primary/20 flex items-center justify-center text-primary font-mono-data text-xs">RF</div>
+<span class="text-body-md font-body-md text-on-surface">Random Forest</span>
+</div>
+<span class="text-label-md font-label-md text-secondary">Primary Classifier</span>
+</div>
+<!-- Model 2 -->
+<div class="flex items-center justify-between p-3 bg-surface-container rounded-lg border border-outline-variant/50 hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-surface-bright flex items-center justify-center text-on-surface-variant font-mono-data text-xs">XGB</div>
+<span class="text-body-md font-body-md text-on-surface">XGBoost</span>
+</div>
+<span class="text-label-md font-label-md text-on-surface-variant">Baseline</span>
+</div>
+<!-- Model 3 -->
+<div class="flex items-center justify-between p-3 bg-surface-container rounded-lg border border-outline-variant/50 hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-surface-bright flex items-center justify-center text-on-surface-variant font-mono-data text-xs">IF</div>
+<span class="text-body-md font-body-md text-on-surface">Isolation Forest</span>
+</div>
+<span class="text-label-md font-label-md text-on-surface-variant">Anomaly Detection</span>
+</div>
+</div>
+<div class="mt-6 p-4 bg-primary/10 border border-primary/20 rounded-lg">
+<p class="text-label-md font-label-md text-primary font-semibold mb-1">Final Selection rationale:</p>
+<p class="text-body-md font-body-md text-on-surface-variant text-sm">Random Forest provided the best balance of interpretability (feature importance extraction is crucial for analyst trust) and performance on the synthetic test set, exhibiting lower variance than XGBoost on this specific dataset schema.</p>
+</div>
+</div>
+<!-- Deployment Architecture -->
+<div class="md:col-span-12 bg-surface-container-low border border-outline-variant rounded-xl p-6 mt-4">
+<h3 class="text-headline-lg font-headline-lg text-on-surface mb-6 flex items-center gap-2 border-b border-outline-variant pb-4">
+<span class="material-symbols-outlined text-inverse-primary" data-icon="cloud_sync">cloud_sync</span>
+                    Deployment Architecture
+                </h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Component 1 -->
+<div class="bg-surface-container p-5 rounded-lg border border-outline-variant hover:border-primary/50 transition-colors">
+<div class="w-10 h-10 rounded-full bg-surface-bright flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="api">api</span>
+</div>
+<h4 class="text-headline-md font-headline-md text-on-surface mb-2">Flask API (Backend)</h4>
+<p class="text-body-md font-body-md text-on-surface-variant">Serves the serialized machine learning model (.pkl). Exposes a RESTful endpoint `/predict` that accepts JSON transaction payloads and returns a probability score.</p>
+</div>
+<!-- Component 2 -->
+<div class="bg-surface-container p-5 rounded-lg border border-outline-variant hover:border-primary/50 transition-colors">
+<div class="w-10 h-10 rounded-full bg-surface-bright flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="web">web</span>
+</div>
+<h4 class="text-headline-md font-headline-md text-on-surface mb-2">React/Tailwind (Frontend)</h4>
+<p class="text-body-md font-body-md text-on-surface-variant">The analyst dashboard (this interface). Designed for high-density data viewing, real-time alert rendering, and manual transaction review workflows.</p>
+</div>
+<!-- Component 3 -->
+<div class="bg-surface-container p-5 rounded-lg border border-outline-variant hover:border-primary/50 transition-colors">
+<div class="w-10 h-10 rounded-full bg-surface-bright flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="storage">storage</span>
+</div>
+<h4 class="text-headline-md font-headline-md text-on-surface mb-2">SQLite (Data Store)</h4>
+<p class="text-body-md font-body-md text-on-surface-variant">Lightweight local database used to store historical transaction logs, analyst annotations, and model performance metrics for demonstration purposes.</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

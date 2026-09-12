@@ -1,0 +1,75 @@
+{
+  "model_name": "XGBoost",
+  "model_version": "1.0.0",
+  "training_random_state": 42,
+  "expected_feature_names": [
+    "step",
+    "amount",
+    "oldbalanceOrg",
+    "newbalanceOrig",
+    "oldbalanceDest",
+    "newbalanceDest",
+    "errorBalanceOrig",
+    "errorBalanceDest",
+    "type_CASH_IN",
+    "type_CASH_OUT",
+    "type_DEBIT",
+    "type_PAYMENT",
+    "type_TRANSFER"
+  ],
+  "numerical_features": [
+    "step",
+    "amount",
+    "oldbalanceOrg",
+    "newbalanceOrig",
+    "oldbalanceDest",
+    "newbalanceDest",
+    "errorBalanceOrig",
+    "errorBalanceDest"
+  ],
+  "categorical_features": [
+    "type"
+  ],
+  "engineered_features": [
+    "errorBalanceOrig",
+    "errorBalanceDest"
+  ],
+  "encoding": {
+    "type": {
+      "method": "one-hot (get_dummies)",
+      "prefix": "type",
+      "drop_first": false,
+      "categories": [
+        "PAYMENT",
+        "TRANSFER",
+        "CASH_OUT",
+        "DEBIT",
+        "CASH_IN"
+      ],
+      "encoded_columns": [
+        "type_CASH_IN",
+        "type_CASH_OUT",
+        "type_DEBIT",
+        "type_PAYMENT",
+        "type_TRANSFER"
+      ]
+    }
+  },
+  "preprocessing": {
+    "logistic_regression": "RobustScaler (fitted on training data)",
+    "random_forest": "None (tree-based)",
+    "xgboost": "None (tree-based)"
+  },
+  "feature_engineering": {
+    "errorBalanceOrig": "oldbalanceOrg - amount - newbalanceOrig",
+    "errorBalanceDest": "oldbalanceDest + amount - newbalanceDest"
+  },
+  "excluded_columns": [
+    "isFraud",
+    "isFlaggedFraud",
+    "nameOrig",
+    "nameDest"
+  ],
+  "target": "isFraud",
+  "selected_model_preprocessor": "None (tree-based)"
+}

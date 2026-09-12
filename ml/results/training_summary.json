@@ -1,0 +1,92 @@
+{
+  "dataset_path": "D:\\stitch_fraudguard_ml_detection_system\\ml\\data\\PS_20174392719_1491204439457_log.csv",
+  "dataset_size": 6362620,
+  "train_size": 5090096,
+  "test_size": 1272524,
+  "fraud_count_total": 8213,
+  "legit_count_total": 6354407,
+  "fraud_rate_pct": 0.129082,
+  "imbalance_ratio": 773.7,
+  "test_size_fraction": 0.2,
+  "random_state": 42,
+  "stratified_split": true,
+  "preprocessing": {
+    "logistic_regression": "RobustScaler (fit on train only)",
+    "random_forest": "None (raw features)",
+    "xgboost": "None (raw features)"
+  },
+  "imbalance_strategy": {
+    "logistic_regression": "class_weight='balanced'",
+    "random_forest": "class_weight='balanced'",
+    "xgboost": "scale_pos_weight=773.7482",
+    "smote_enn_status": "IMPRACTICAL on full set \u2014 academic subset experiment run"
+  },
+  "smote_enn_experiment": {
+    "experiment": "SMOTE-ENN on 100K stratified training subset",
+    "subset_size": 100000,
+    "model": "Logistic Regression",
+    "note": "ACADEMIC ONLY \u2014 not used for production model selection",
+    "lr_smote_f1": 0.046353,
+    "lr_smote_recall": 0.965307,
+    "lr_smote_pr_auc": 0.588603
+  },
+  "model_metrics": {
+    "Logistic Regression": {
+      "accuracy": 0.949669,
+      "precision": 0.024084,
+      "recall": 0.961047,
+      "f1": 0.046991,
+      "roc_auc": 0.990915,
+      "pr_auc": 0.581057
+    },
+    "Random Forest": {
+      "accuracy": 0.999919,
+      "precision": 0.942529,
+      "recall": 0.998174,
+      "f1": 0.969554,
+      "roc_auc": 0.999905,
+      "pr_auc": 0.998758
+    },
+    "XGBoost": {
+      "accuracy": 0.999993,
+      "precision": 0.996959,
+      "recall": 0.997565,
+      "f1": 0.997262,
+      "roc_auc": 0.999761,
+      "pr_auc": 0.998523
+    }
+  },
+  "selected_final_model": "XGBoost",
+  "training_date": "2026-08-19T17:35:24.890753",
+  "training_times_seconds": {
+    "logistic_regression": 28.66,
+    "random_forest": 152.58,
+    "xgboost": 166.86
+  },
+  "output_artifacts": {
+    "results_dir": "D:\\stitch_fraudguard_ml_detection_system\\ml\\results",
+    "models_dir": "D:\\stitch_fraudguard_ml_detection_system\\ml\\models",
+    "plots": [
+      "confusion_matrix_logistic_regression.png",
+      "confusion_matrix_random_forest.png",
+      "confusion_matrix_xgboost.png",
+      "roc_curve_comparison.png",
+      "precision_recall_curve.png",
+      "random_forest_feature_importance.png",
+      "xgboost_feature_importance.png",
+      "model_comparison.png"
+    ],
+    "data_files": [
+      "model_metrics.csv",
+      "training_summary.json"
+    ],
+    "model_files": [
+      "fraudguard_model.joblib",
+      "fraudguard_preprocessor.joblib",
+      "feature_config.json",
+      "logistic_regression_model.joblib",
+      "random_forest_model.joblib",
+      "xgboost_model.joblib"
+    ]
+  }
+}
