@@ -21,7 +21,7 @@ FraudGuard is an end-to-end academic system that demonstrates the application of
    - [Frontend Setup](#frontend-setup)
 9. [Usage](#usage)
 10. [Academic Disclaimer](#academic-disclaimer)
-11. [Author](#author)
+11. [Contributors](#contributors)
 
 ---
 
@@ -287,10 +287,24 @@ The PaySim dataset used for training is a **synthetic** dataset generated to mim
 
 ---
 
-## Author
+## Contributors
 
-**Sathwik** — B.Tech, Computer Science & Engineering  
-Final Year Major Project · 2025–2026
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/ksathwik-93">
+        <img src="https://github.com/ksathwik-93.png?size=100" width="100px;" alt="Sathwik" style="border-radius:50%;"/><br />
+        <sub><b>Sathwik</b></sub>
+      </a><br />
+      <sub>Lead Developer & ML Engineer</sub><br />
+      <sub><a href="https://github.com/ksathwik-93">@ksathwik-93</a></sub>
+    </td>
+  </tr>
+</table>
+
+- **Sathwik** ([@ksathwik-93](https://github.com/ksathwik-93)) — B.Tech, Computer Science & Engineering · Final Year Major Project (2025–2026)
+
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/ksathwik-93/Stitch_fraudguard_ml_detection_system/issues).
 
 ---
 
