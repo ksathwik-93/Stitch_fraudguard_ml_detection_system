@@ -9,13 +9,19 @@ from .schema import CREATE_TRANSACTIONS_TABLE, CREATE_INDICES
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, "data")
-DB_PATH = os.path.join(DATA_DIR, "fraudguard.db")
+DEFAULT_DB_PATH = os.path.join(DATA_DIR, "fraudguard.db")
 
 
 def get_db_path() -> str:
     """Return the absolute path to the SQLite database file."""
+    custom_path = os.environ.get("FRAUDGUARD_DB_PATH")
+    if custom_path:
+        db_dir = os.path.dirname(os.path.abspath(custom_path))
+        if db_dir:
+            os.makedirs(db_dir, exist_ok=True)
+        return custom_path
     os.makedirs(DATA_DIR, exist_ok=True)
-    return DB_PATH
+    return DEFAULT_DB_PATH
 
 
 def get_connection() -> sqlite3.Connection:
